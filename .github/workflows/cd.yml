@@ -30,7 +30,7 @@ jobs:
         with:
           credentials_json: "${{ secrets.GCP_CREDENTIALS }}"
 
-      - name: Build prod
+      - name: Migrate to TursoDB
         run: /bin/sh scripts/migrateup.sh
 
       - name: "Set up Cloud SDK"
